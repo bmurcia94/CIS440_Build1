@@ -11,3 +11,14 @@ function newPage(page) {
 }
 
 document.getElementById("defaultOpen").click();
+
+
+function changePage(pageID) {
+    var currentPage = document.querySelectorAll('div[id^="page"]');
+    currentPage.forEach(function (page) {
+        page.style.display = 'none';
+    });
+
+    var selectedPage = document.getElementById(pageID);
+    selectedPage.style.display = 'block';
+}
