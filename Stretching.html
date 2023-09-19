@@ -2,25 +2,131 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>All Exercises</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #video {
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+
+    <title>All Exercises</title>
 </head>
 
 
 <body>
+
+    <header>
+        <h1>Stretching</h1>
+    </header>
+
     <div id="Stretching" class="tabcontent">
-    <section class="exercise-section">
-      <h2>Stretching</h2>
-      <button onclick="window.location='index.html'">Back</button>
-      <ul>
-        <a href="https://www.youtube.com/shorts/n-cavPgdkLA" target="_blank"><li>Hamstring Stretch</li></a>
-        <a href="https://www.youtube.com/watch?v=GljYRW5bkUg&ab_channel=PrecisionMovement" target="_blank"><li>Quad Stretch</li></a>
-        <a href="https://www.youtube.com/shorts/kEsmsvaaXAo" target="_blank"><li>Calf Stretch</li></a>
-        <a href="https://www.youtube.com/shorts/4xyNRYoZxOg" target="_blank"><li>Shoulder Stretch</li></a>
-        <a href="https://www.youtube.com/watch?v=H5h54Q0wpps&ab_channel=SharpHealthCare" target="_blank"><li>Neck Stretch</li></a>
-      </ul>
-    </section>
-</div>
-  </body>
+        <section class="exercise-section">
+
+            <button onclick="window.location='index.html'">Back</button>
+            <ul>
+                <li><a href="#" onclick="changePage('pageHamstring')">Hamstring Stretch</a></li>
+                <li><a href="#" onclick="changePage('pageQuad')">Quad Stretch</a></li>
+                <li><a href="#" onclick="changePage('pageCalf')">Calf Stretch</a></li>
+                <li><a href="#" onclick="changePage('pageShoulder')">Shoulder Stretch</a></li>
+                <li><a href="#" onclick="changePage('pageNeck')">Neck Stretch</a></li>
+            </ul>
+
+
+            <div id="pageHamstring" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Hamstring Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/n-cavPgdkLA"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageQuad" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Quad Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/GljYRW5bkUg?si=SFFJ8qhpzfMFIUwy"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageCalf" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Calf Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/kEsmsvaaXAo"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageShoulder" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Shoulder Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/4xyNRYoZxOg"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageNeck" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Neck Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/H5h54Q0wpps?si=dHdp1GCgnOns-uhZ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
