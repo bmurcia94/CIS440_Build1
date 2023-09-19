@@ -2,28 +2,163 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>All Exercises</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #video {
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+
+    <title>All Exercises</title>
 </head>
 
-
   
-  <body>
+<body>
+    <header>
+        <h1>Weight Training</h1>
+    </header>
+
     <div id="WT" class="tabcontent">
-    <section class="exercise-section">
-      <h2>Weight Training</h2>
-      <button onclick="window.location='index.html'">Back</button>
-      <ul>
-        <a href='squat.html'><li>Squat</li></a>
-        <a href="https://www.youtube.com/shorts/vfKwjT5-86k" target="_blank"><li>Deadlift</li></a>
-        <a href="https://www.youtube.com/shorts/i-gLOirnPaU" target="_blank"><li>Bench Press</li></a>
-        <a href="https://www.youtube.com/shorts/dvG8B2OjfWk" target="_blank"><li>Pull-up</li></a>
-        <a href="https://www.youtube.com/shorts/N6paU6TGFWU" target="_blank"><li>Bicep Curls</li></a>
-        <a href="https://www.youtube.com/shorts/1lfuZnNfkQM" target="_blank"><li>Tricep Pushdowns</li></a>
-        <a href="https://www.youtube.com/shorts/bQPhGIJJ-jQ" target="_blank"><li>Shoulder Press</li></a>
-      </ul>
-    </section>
-</div>
-  </body>
+        <section class="exercise-section">
+            <button onclick="window.location='index.html'">Back</button>
+            <ul>
+                <li><a href="#" onclick="changePage('pageSquat')">Squat</a></li>
+                <li><a href="#" onclick="changePage('pageDeadlift')">Deadlift</a></li>
+                <li><a href="#" onclick="changePage('pageBench')">Bench Press</a></li>
+                <li><a href="#" onclick="changePage('pagePullUp')">Pull Up</a></li>
+                <li><a href="#" onclick="changePage('pageBicep')">Bicep Curl</a></li>
+                <li><a href="#" onclick="changePage('pageTricep')">Tricep Pushdown</a></li>
+                <li><a href="#" onclick="changePage('pageShoulder')">Shoulder Press</a></li>
+            </ul>
+
+
+            <div id="pageSquat" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Squat Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/MLoZuAkIyZI?si=7hmkCX0gLvU1xTvP"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageDeadlift" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Deadlift Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/vfKwjT5-86k"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="pageBench" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Bench Press Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/i-gLOirnPaU"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pagePullUp" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Pull Up Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/dvG8B2OjfWk"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageBicep" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Bicep Curl Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/N6paU6TGFWU"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageTricep" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Tricep Pushdown Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/1lfuZnNfkQM"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="pageShoulder" style="display: none;">
+                <div id="exercise-list"></div>
+                <br>
+                <div id="WT" class="tabcontent">
+                    <section class="exercise-section">
+                        <h2>Shoulder Press Video</h2>
+                        <div id="video">
+                            <iframe width="315" height="560" src="https://www.youtube.com/embed/bQPhGIJJ-jQ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
