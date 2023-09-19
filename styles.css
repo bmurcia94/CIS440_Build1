@@ -48,3 +48,18 @@ li {
 li:hover {
     background-color: #ddd;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.typeButton {
+  margin-right: 20px;
+  padding: 20px 20px;
+  font-size: 24px;
+  cursor: pointer; 
+  border-radius: 8px;
+}
