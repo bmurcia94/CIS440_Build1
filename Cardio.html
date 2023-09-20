@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #video {
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+
+  <title>All Exercises</title>
+</head>
+
+<body>
+  <header>
+    <h1>Cardio</h1>
+  </header>
+  <div id="Cardio" class="tabcontent">
+    <section class="exercise-section">
+      <button onclick="window.location='exercises.html'">Back</button>
+      <ul>
+        <li><a href="#" onclick="changePage('pageRun')">Running</a></li>
+        <li><a href="#" onclick="changePage('pageCycle')">Cycling</a></li>
+        <li><a href="#" onclick="changePage('pageJumpRope')">Jump Rope</a></li>
+      </ul>
+
+
+      <div id="pageRun" style="display: none;">
+        <div id="exercise-list"></div>
+        <br>
+        <div id="WT" class="tabcontent">
+          <section class="exercise-section">
+            <h2>Running Video</h2>
+            <div id="video">
+              <iframe width="315" height="560" src="https://www.youtube.com/embed/Ct_S6eW3Ovc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+      <div id="pageCycle" style="display: none;">
+        <div id="exercise-list"></div>
+        <br>
+        <div id="WT" class="tabcontent">
+          <section class="exercise-section">
+            <h2>Cycling Video</h2>
+            <div id="video">
+              <iframe width="315" height="560" src="https://www.youtube.com/embed/DSBOU0ELKjI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+      <div id="pageJumpRope" style="display: none;">
+        <div id="exercise-list"></div>
+        <br>
+        <div id="WT" class="tabcontent">
+          <section class="exercise-section">
+            <h2>Jump Rope Video</h2>
+            <div id="video">
+              <iframe width="315" height="560" src="https://www.youtube.com/embed/A0cwbJ5inTo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
