@@ -6,8 +6,8 @@
 
 input,
 button,
-textarea,
-select {
+select,
+canvas {
   font: inherit;
 }
 
