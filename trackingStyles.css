@@ -65,3 +65,13 @@
       hsl(267deg 76% 65%) 67%,
       hsl(270deg 27% 94%) 100%);
 }
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
