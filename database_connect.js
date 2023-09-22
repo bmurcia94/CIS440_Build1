@@ -7,9 +7,12 @@ var con = mysql.createConnection({
     password: "fall2023team1",
     database: "fall2023team1"
 });
-//con.connect();
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
+//Code below is a test that will pull data from our database
+con.connect(function (err) {
+    if (err) throw err;
+    con.query("SELECT * FROM User", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    });
 });
