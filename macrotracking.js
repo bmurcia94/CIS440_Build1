@@ -1,6 +1,6 @@
 proteingoal = 385;
-carbgoal = 350;
-fatgoal = 2275;
+carbgoal = 2275;
+fatgoal = 350;
 
 let progressChart;
 const ormData = {
@@ -36,17 +36,17 @@ function updateChart() {
   const weeks = Object.keys(ormData.protein).map(Number).sort((a, b) => a - b);
 
   const proteinData = weeks.map((week) => {
-    const percentagepro = (ormData.protein[week] / proteingoal);
+    const percentagepro = ((ormData.protein[week] / proteingoal)*100);
     return percentagepro.toFixed(2);
   });
 
   const carbsData = weeks.map((week) => {
-    const percentagecarb = (ormData.carbs[week] / carbgoal);
+    const percentagecarb = ((ormData.carbs[week] / carbgoal)*100);
     return percentagecarb.toFixed(2);
   });
 
   const fatData = weeks.map((week) => {
-    const percentagefat = (ormData.fat[week] / fatgoal);
+    const percentagefat = ((ormData.fat[week] / fatgoal)*100);
     return percentagefat.toFixed(2);
   });
 
@@ -56,17 +56,17 @@ function updateChart() {
       labels: weeks,
       datasets: [
         {
-          label: 'protein',
+          label: 'protein percent',
           data: proteinData,
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
         {
-          label: 'carbs',
+          label: 'carbs percent',
           data: carbsData,
           backgroundColor: 'rgba(255, 206, 86, 0.5)',
         },
         {
-          label: 'fat',
+          label: 'fat percent',
           data: fatData,
           backgroundColor: 'rgba(153, 102, 255, 0.5)',
         },
@@ -80,7 +80,7 @@ function updateChart() {
           {
             ticks: {
               beginAtZero: true,
-              max: 100, 
+              max: 100,        
             },
           },
         ],
@@ -88,15 +88,9 @@ function updateChart() {
     },
   });
 
-calculatePercentage();
+
 }
+
 
 updateChart();
 
-function calculatePercentage() {
-  const totalProtein = Object.values(ormData.protein).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
-  const totalCarbs = Object.values(ormData.carbs).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
-  const totalFat = Object.values(ormData.fat).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
-}
-
-calculatePercentage();
