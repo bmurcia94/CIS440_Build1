@@ -56,41 +56,47 @@ function updateChart() {
       labels: weeks,
       datasets: [
         {
-          label: 'protein percent',
+          label: 'Protein',
           data: proteinData,
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
         {
-          label: 'carbs percent',
+          label: 'Carbs',
           data: carbsData,
           backgroundColor: 'rgba(255, 206, 86, 0.5)',
         },
         {
-          label: 'fat percent',
+          label: 'Fat',
           data: fatData,
           backgroundColor: 'rgba(153, 102, 255, 0.5)',
         },
       ],
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-              max: 100,        
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100, // Set the max value of the y-axis to 100%.
+                ticks: {
+                    callback: function (value) {
+                        return value + '%';
+                    },
+                },
             },
-          },
-        ],
-      },
+        },
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.dataset.label + ': ' + context.parsed.y.toFixed(2) + '%';
+                    },
+                },
+            },
+        },
     },
-  });
-
+});
 
 }
 
 
 updateChart();
-
