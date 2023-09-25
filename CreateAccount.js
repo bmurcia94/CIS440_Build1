@@ -16,36 +16,30 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         // Send the data to the server for insertion
-        sendDataToServer(userData);
+      sendDataToServer(userData);
     });
 
     async function sendDataToServer(userData) {
-        try {
-            const response = await fetch("/submit_form", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(userData),
-            });
-
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-
-            const data = await response.json();
-            // Handle the server response here
-            console.log(data);
-
-            // You can add further logic based on the response
+        fetch("/submit_form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response here
             if (data.success) {
                 alert("Account created successfully!");
             } else {
                 alert("An error occurred: " + data.message);
             }
-        } catch (error) {
+        })
+        .catch(error => {
             console.error("Error:", error);
             alert("An error occurred. Please try again.");
+        });
         }
-    }
+    
 });

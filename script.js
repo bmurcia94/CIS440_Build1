@@ -35,7 +35,7 @@ function userLogin() {
             user = JSON.parse(userTable);       //converts array data to JSON
 
             var checkUser = user.find(function (user) {         // variable that will use find method to search array for specific values
-                return user.userName === userName && user.userpassword === userPass;        //checks whether username and its corresponding password are the same 
+                return user.userName === userName && user.userPassword === userPass;        //checks whether username and its corresponding password are the same 
             });
 
             if (checkUser) {

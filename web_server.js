@@ -23,7 +23,10 @@ var con = mysql.createConnection({
 });
 con.connect(); //launches connection
 
+ 
+
 var server = http.createServer(function (request, response) {  //creates web server
+ 
 
     //console.log(request.url);
     //console.log(request.headers.host);
@@ -123,3 +126,4 @@ var server = http.createServer(function (request, response) {  //creates web ser
 server.listen(8000); 
 console.log("\nThe Web server is alive!!!\n" +
     "It's listening on http://127.0.0.1:8000 or http://localhost:8000");
+
