@@ -65,21 +65,3 @@
       hsl(267deg 76% 65%) 67%,
       hsl(270deg 27% 94%) 100%);
 }
-
-p {
-  width: 60%;
-  max-width: 400px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow:
-    0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075),
-    0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075);
-  background-color: #f9f9f9;
-  color: #333;
-}
