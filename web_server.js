@@ -1,4 +1,5 @@
 // First steps to setting up Node.js HTTP web server
+const { exec } = require('child_process');
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
@@ -126,4 +127,6 @@ var server = http.createServer(function (request, response) {  //creates web ser
 server.listen(8000); 
 console.log("\nThe Web server is alive!!!\n" +
     "It's listening on http://127.0.0.1:8000 or http://localhost:8000");
+    
+
 
