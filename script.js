@@ -39,7 +39,9 @@ function userLogin() {
             });
 
             if (checkUser) {
+                sessionStorage.setItem("isLoggedIn", true);
                 alert("Login successful!"); //if both are correlated, success message
+                window.location.href = 'index.html'; // redirect to homepage after successful login
             }
             else {
                 alert("Login Failed. Try again"); //if both are not correlated, failed message
@@ -47,3 +49,18 @@ function userLogin() {
             }); //end if-else
 
 } //end function
+
+window.onload = function() {
+    if (sessionStorage.getItem("isLoggedIn")) {
+        document.getElementById("loginStatus").textContent = "Logged In";
+    } else {
+        document.getElementById("loginStatus").textContent = "Not Logged In";
+    }
+}
+
+function logout() {
+    sessionStorage.removeItem("isLoggedIn");
+    window.location.href = 'login.html'; // redirect to login page after logout
+}
+
+
