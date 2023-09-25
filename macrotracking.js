@@ -89,7 +89,7 @@ calculatePercentage();
 
 */
 
-proteingoal = 100;
+proteingoal = 50;
 
 let progressChart;
 const ormData = {
