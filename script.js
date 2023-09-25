@@ -51,10 +51,15 @@ function userLogin() {
 } //end function
 
 window.onload = function() {
+    const loginBtn = document.getElementById("btnLogin");
+    const logoutBtn = document.getElementById("btnLogout");
+    
     if (sessionStorage.getItem("isLoggedIn")) {
-        document.getElementById("loginStatus").textContent = "Logged In";
+        loginBtn.style.display = 'none'; // Hide the Log In button
+        logoutBtn.style.display = 'block'; // Show the Log Out button
     } else {
-        document.getElementById("loginStatus").textContent = "Not Logged In";
+        loginBtn.style.display = 'block'; // Show the Log In button
+        logoutBtn.style.display = 'none'; // Hide the Log Out button
     }
 }
 
