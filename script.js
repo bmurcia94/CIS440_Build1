@@ -47,3 +47,47 @@ function userLogin() {
             }); //end if-else
 
 } //end function
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accountForm = document.getElementById("accountForm");
+
+    accountForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        const userName = document.getElementById("userName").value;
+        const userPassword = document.getElementById("userPassword").value;
+        const userEmail = document.getElementById("userEmail").value;
+
+        // You can perform client-side validation here
+
+        // Create a JSON object with the user input data
+        const userData = {
+            userName,
+            userPassword,
+            userEmail,
+        };
+
+        // Send the data to the server for insertion
+        sendDataToServer(userData);
+    });
+
+    function sendDataToServer(userData) {
+        // Use Fetch API or XMLHttpRequest to send a POST request to your server endpoint
+        // Replace 'http://your-server-endpoint' with the actual URL where your server is running
+        fetch("http://127.0.0.1:8000/", {
+            method: "POST",
+            body: JSON.stringify(userData),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the server (e.g., display success message or errors)
+            console.log(data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+});

@@ -67,7 +67,49 @@ var server = http.createServer(function (request, response) {  //creates web ser
             response.write('404 - File Not Found (' + filename + ')');
             response.end();
         }
-    } //end else
+    }  
+    if (request.method === 'POST' && request.url === '/submit_form') {
+        let data = '';
+
+        request.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        request.on('end', () => {
+            const formData = JSON.parse(data); // Assuming the data is sent as JSON
+            const { userName, userPassword, userEmail } = formData;
+
+            // Insert data into the "User" table in the MySQL database
+            const myQuery = 'INSERT INTO User (userName, userPassword, userEmail) VALUES (?, ?, ?)';
+            con.query(myQuery, [userName, userPassword, userEmail], (err, result) => {
+                if (err) {
+                    console.error('Error inserting data:', err);
+                    response.writeHead(500, { 'Content-Type': 'application/json' });
+                    response.end(JSON.stringify({ success: false, message: 'An error occurred' }));
+                } else {
+                    console.log('Data inserted successfully');
+                    response.writeHead(200, { 'Content-Type': 'application/json' });
+                    response.end(JSON.stringify({ success: true, message: 'Data inserted successfully' }));
+                }
+            });
+        });
+    } else if (table === 'User') {
+        // Handle GET request for retrieving User data
+        var myQuery = 'SELECT * FROM User';
+        con.query(myQuery, function (err, result, fields) {
+            if (err) {
+                console.error('Error fetching data:', err);
+                response.writeHead(500, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify({ success: false, message: 'An error occurred' }));
+            } else {
+                response.writeHead(200, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify(result));
+            }
+        });
+    } else {
+        // Handle other routes and static file serving
+        // ...
+    }//end else
 }); // end var server = http.createServer
 
 
