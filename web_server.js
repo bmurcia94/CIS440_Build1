@@ -67,7 +67,10 @@ var server = http.createServer(function (request, response) {  //creates web ser
             response.write('404 - File Not Found (' + filename + ')');
             response.end();
         }
-    }  
+    
+    
+    
+    }//end else
     if (request.method === 'POST' && request.url === '/submit_form') {
         let data = '';
 
@@ -109,8 +112,7 @@ var server = http.createServer(function (request, response) {  //creates web ser
     } else {
         // Handle other routes and static file serving
         // ...
-    }//end else
-}); // end var server = http.createServer
+}}); // end var server = http.createServer
 
 
 //---------------Needs "npm install mysql" to function--------------------------*/
