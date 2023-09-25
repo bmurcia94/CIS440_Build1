@@ -91,25 +91,12 @@ function updateChart() {
 calculatePercentage();
 }
 
-
 updateChart();
 
 function calculatePercentage() {
   const totalProtein = Object.values(ormData.protein).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
   const totalCarbs = Object.values(ormData.carbs).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
   const totalFat = Object.values(ormData.fat).reduce((acc, value) => acc + parseFloat(value) || 0, 0);
-
-  /*
-  const totalMacro = totalProtein + totalCarbs + totalFat;
-
-  const proteinPercentage = (totalProtein / totalMacro) * 100;
-  const carbsPercentage = (totalCarbs / totalMacro) * 100;
-  const fatPercentage = (totalFat / totalMacro) * 100;
-
-  document.getElementById('proteinPercentage').textContent = `Protein: ${proteinPercentage.toFixed(2)}%`;
-  document.getElementById('carbsPercentage').textContent = `Carbs: ${carbsPercentage.toFixed(2)}%`;
-  document.getElementById('fatPercentage').textContent = `Fat: ${fatPercentage.toFixed(2)}%`;
-  */
 }
 
 calculatePercentage();
