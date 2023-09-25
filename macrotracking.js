@@ -1,4 +1,3 @@
-/*
 proteingoal = 100; 
 
 let progressChart;
@@ -87,7 +86,7 @@ function calculatePercentage() {
 
 calculatePercentage();
 
-*/
+/*
 
 proteingoal = 50;
 
@@ -199,6 +198,8 @@ function calculatePercentage() {
 }
 
 calculatePercentage();
+
+*/
 
 
 
