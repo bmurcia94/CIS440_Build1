@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    #video {
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+
+  <title>Stregnth Training</title>
+</head>
+
+
+<body>
+  <header>
+    <h1>Stregnth Training Workout Plan</h1>
+  </header>
+
+  <div id="ST" class="tabcontent">
+    <section class="exercise-section">
+      <button onclick="window.location='index.html'">Home</button>
+      <button onclick="window.location='survey.html'">Back</button>
+
+      <ul>
+        <button class="accordion">Sunday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Monday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Tuesday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Wednesday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Thursday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Friday</button>
+        <div class="panel">
+          <p>
+            <li>Cardio: <br> - 10 minutes of running</li>
+            <li>Bench: <br> - 4 sets x 10 reps</li>
+            <li>Tricep Extension: <br> - 4 sets x 12 reps</li>
+            <li>Cardio: <br> - 10 minutes of running</li>
+          </p>
+        </div>
+
+        <button class="accordion">Saturday</button>
+        <div class="panel">
+          <p>
+            <li>REST DAY</li>            
+          </p>
+        </div>
+      </ul>
+      </section>
+    </div>
+
+      <button class="accordion">Macros</button>
+        <div class="panel">
+          <p>          
+          </p>
+        </div>
+
+  <script src="script.js"></script>
+  <script> var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
