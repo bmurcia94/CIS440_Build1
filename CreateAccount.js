@@ -32,13 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // Handle the response here
             if (data.success) {
                 alert("Account created successfully!");
+                window.location.href = 'login.html';
             } else {
-                alert("An error occurred: " + data.message);
+                // alert("An error occurred: " + data.message);
+                // alert("Account created successfully!");
+                window.location.href = 'login.html';
             }
         })
         .catch(error => {
             console.error("Error:", error);
-            alert("An error occurred. Please try again.");
+            // alert("An error occurred. Please try again.");
+            window.location.href = 'login.html';
         });
         }
     
