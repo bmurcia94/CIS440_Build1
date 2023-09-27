@@ -87,5 +87,19 @@ function updateChart() {
     }
   });
 }
+function clearChartData() {
+  ormData.squat = [];
+  ormData.deadlift = [];
+  ormData.benchpress = [];
+  ormData.pullup = [];
+  ormData.bicepcurl = [];
+  ormData.triceppushdown = [];
+  ormData.shoulderpress = [];
+
+
+  updateChart();
+}
+const clearDataButton = document.getElementById('clearDataButton');
+clearDataButton.addEventListener('click', clearChartData);
 
 updateChart();
