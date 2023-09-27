@@ -65,3 +65,28 @@
       hsl(267deg 76% 65%) 67%,
       hsl(270deg 27% 94%) 100%);
 }
+
+#chart-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#clearDataButton {
+  /*background-color: #4CAF50;*/
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  background-image: linear-gradient(218deg,
+      hsl(223deg 68% 6%) 0%,
+      hsl(252deg 89% 35%) 33%,
+      hsl(267deg 76% 65%) 67%,
+      hsl(270deg 27% 94%) 100%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
