@@ -97,6 +97,17 @@ function updateChart() {
 });
 
 }
+function clearChartData() {
+  // Clear all data from ormData
+  ormData.protein = [];
+  ormData.carbs = [];
+  ormData.fat = [];
+
+  // Update the chart to reflect the cleared data
+  updateChart();
+}
+const clearDataButton = document.getElementById('clearDataButton');
+clearDataButton.addEventListener('click', clearChartData);
 
 
 updateChart();
