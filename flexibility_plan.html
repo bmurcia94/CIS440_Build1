@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 
+  
+  <!-- Inter CSS to bold the list item fonts -->
   <style>
       li span {
       font-weight: bold;
@@ -25,6 +27,7 @@
   <div id="ST" class="tabcontent">
     <section class="exercise-section">
 
+      <!-- Navigational buttons -->
       <div class="button-container">
 
         <button class="typeButton" onclick="window.location='index.html'">Home</button>
@@ -33,6 +36,7 @@
   
       </div>
 
+      <!-- This portion of the code displays the data in an accordion style. When clicked, it will expand with information -->
       <ul>
         <button class="accordion">Sunday</button>
         <div class="panel">
@@ -103,15 +107,17 @@
     </div>
 
   <script src="script.js"></script>
-  <script> var acc = document.getElementsByClassName("accordion");
+
+  <!-- Internal Script for accordion interface functionality -->
+  <script> var acc = document.getElementsByClassName("accordion");  //collect HTML element info
     var i;
 
-    for (i = 0; i < acc.length; i++) {
+    for (i = 0; i < acc.length; i++) {                              //for loop that adds even listener and calls function to toggle active
       acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
 
         var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
+        if (panel.style.display === "block") {                      //if statement that will remove and display the content within the sibling variable
           panel.style.display = "none";
         } else {
           panel.style.display = "block";
